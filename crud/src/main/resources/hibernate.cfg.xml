@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dev</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">dev</property>
+        <property name="hbm2ddl.auto">create</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <mapping class="models.Artist"/>
+        <mapping class="models.Label"/>
+        <mapping class="models.Song"/>
+        <mapping class="models.Text"/>
+    </session-factory>
+</hibernate-configuration>
